@@ -1,3 +1,0 @@
-[submodule "fdk-aac-sys/aac"]
-	path = fdk-aac-sys/aac
-	url = https://github.com/haileys/fdk-aac-mirror
