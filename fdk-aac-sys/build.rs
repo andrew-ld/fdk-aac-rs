@@ -200,8 +200,8 @@ fn main() {
     cc.files(SOURCES);
     cc.define("FDK_FALLTHROUGH", "");
 
-    if let Ok(ndk_library_path) = std::env::var("NDK_LIBRARY_PATH") {
-        cc.include(ndk_library_path);
+    if let Ok(ndk_headers_path) = std::env::var("NDK_HEADERS_PATH") {
+        cc.include(ndk_headers_path);
     }
 
     for include in INCLUDE_DIRS {
