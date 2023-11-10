@@ -198,7 +198,6 @@ fn main() {
 
     cc.warnings(false);
     cc.files(SOURCES);
-    cc.define("FDK_FALLTHROUGH", "");
 
     if let Ok(ndk_headers_path) = std::env::var("NDK_HEADERS_PATH") {
         cc.include(ndk_headers_path);
