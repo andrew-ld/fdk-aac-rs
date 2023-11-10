@@ -201,9 +201,7 @@ fn main() {
     cc.define("FDK_FALLTHROUGH", "");
 
     if let Ok(ndk_library_path) = std::env::var("NDK_LIBRARY_PATH") {
-        for include in ndk_library_path.split(",") {
-            cc.include(include);
-        }
+        cc.include(ndk_library_path);
     }
 
     for include in INCLUDE_DIRS {
