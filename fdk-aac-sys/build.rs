@@ -200,6 +200,12 @@ fn main() {
     cc.files(SOURCES);
     cc.define("FDK_FALLTHROUGH", "");
 
+    if Ok(custom_include_dirs) = std::env::var("CUSTOM_INCLUDE_PATHS") {
+        for include in custom_include_dirs.split(",") {
+            cc.include(include);
+        }
+    }
+
     for include in INCLUDE_DIRS {
         cc.include(include);
     }
